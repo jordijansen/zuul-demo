@@ -1,0 +1,16 @@
+zuul:
+  routes:
+    movies:
+      serviceId: movies
+    users:
+      url: http://localhost:8003
+
+movies:
+  ribbon:
+    listOfServers: http://localhost:8001,http://localhost:8002
+
+management:
+  security:
+    enabled: false
+
+ribbon.OkToRetryOnAllOperations: false
